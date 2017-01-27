@@ -1,0 +1,6 @@
+<?php
+     require_once('BuscaViaCEP_inc.php');
+	 
+	 use Jarouche\ViaCEP\HelperViaCep;
+	 $class_cep = HelperViaCep::getBuscaViaCEP('Querty','01311300');
+     print_r($class_cep);

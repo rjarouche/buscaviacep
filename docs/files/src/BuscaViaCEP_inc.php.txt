@@ -1,0 +1,7 @@
+<?php
+
+require_once 'ViaCEPInterface.php';
+require_once 'BuscaViaCEP.php';
+require_once 'BuscaViaCEPQuerty.php';
+require_once 'HelperViaCep.php';
+

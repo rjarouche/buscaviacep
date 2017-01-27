@@ -1,0 +1,26 @@
+{
+    "name": "jarouche/viacep",
+    "description": "Classe para pesquisar o CEP atraves do servico gratuito viacep",
+    "keywords": ["CEP","Pesquisa","ViaCEP"],
+    "type": "library",
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rodrigo Jarouche",
+            "email": "rjarouche@gmail.com",
+            "homepage": "http://rodrigojarouche.blogspot.com.br"
+        }
+    ],
+    "minimum-stability": "dev",
+    "keywords": ["PHP","CEP","viacep"],
+    "homepage": "http://rodrigojarouche.blogspot.com.br",
+	
+    "autoload": {
+        "psr-4": {
+            "Jarouche\\ViaCEP\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+use Jarouche\ViaCEP\BuscaViaCEPQuerty;
+use Jarouche\ViaCEP\HelperViaCep;
+
+//Using Helper
+$result = HelperViaCep::getBuscaViaCEP('Querty', '01311300');
+print_r($result);
+
+//Using class
+$class = new BuscaViaCEPQuerty();
+$result = $class->retornaCEP('01311300');
+
+echo $class->retornaConteudoRequisicao();
+print_r($result);
