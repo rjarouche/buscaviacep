@@ -69,8 +69,6 @@ abstract class buscaViaCEP implements ViaCEPInterface
     {
         $this->results_string = file_get_contents(self::CEP_SITE . $this->cep . static::CEP_METHOD.$this->outros_parametros);
     }
-    
-    
     /**
      * Método fazRequisicao
      * Método FACADE para validar e fazer a requicao;
