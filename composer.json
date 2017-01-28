@@ -14,7 +14,7 @@
             "homepage": "http://rodrigojarouche.blogspot.com.br"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "keywords": ["PHP","CEP","viacep"],
     "homepage": "http://rodrigojarouche.blogspot.com.br",
 	
