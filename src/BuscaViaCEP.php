@@ -24,7 +24,6 @@ abstract class buscaViaCEP implements ViaCEPInterface
      * @var string CEP_METHOD 
     */
     const CEP_METHOD = '';
-    
     /** 
      * Armazena cep pré-formatado para busca p.ex 09190099
      * @var string $cep 
