@@ -100,9 +100,6 @@ abstract class buscaViaCEP implements ViaCEPInterface
      
      
 
-    public function retornaCEP($cep)
-    {
-        $this->fazRequisicao($cep);
-        return [];
-    }
+    abstract public function retornaCEP($cep);
+
 }
