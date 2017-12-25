@@ -20,7 +20,6 @@
             "dev-master": "0.1-dev"
         }
     },
-    "keywords": ["PHP","CEP","viacep"],
     "homepage": "http://rodrigojarouche.blogspot.com.br",
 	
     "autoload": {

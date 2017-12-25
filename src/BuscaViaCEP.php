@@ -14,7 +14,7 @@ abstract class buscaViaCEP implements ViaCEPInterface
      * Constante que indica qual o endereço da requisição
      * @var string CEP_SITE 
      */
-    const CEP_SITE = 'https://viacep.com.br/ws/';
+    const CEP_SITE = 'http://viacep.com.br/ws/';
     
     /** 
      * 
@@ -66,12 +66,25 @@ abstract class buscaViaCEP implements ViaCEPInterface
 
     protected function buscaInfoCEP()
     {
+        
+        /*
         $this->results_string = file_get_contents(
                                     self::CEP_SITE . 
                                     $this->cep . 
                                     static::CEP_METHOD.
                                     $this->outros_parametros
         );
+        */
+        
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        $url = self::CEP_SITE . $this->cep . static::CEP_METHOD.$this->outros_parametros;
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSLVERSION,3); 
+        $this->results_string = curl_exec($ch);
+        curl_close($ch);
+        
     }
     /**
      * Método fazRequisicao
