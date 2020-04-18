@@ -37,4 +37,17 @@ class HelperViaCep
 
         return ["result" => $obj->retornaCEP($cep), "text" => $obj->retornaConteudoRequisicao()];
     }
+
+
+    public static function getBuscaViaCEPLogradouro($uf,$cidade,$logradouro)
+    {
+        $cep = compact("uf","cidade","logradouro");
+
+        var_dump($cep);
+        $namespace = 'Jarouche\\ViaCEP\\';
+        $class = $namespace . 'BuscaViaCEPLogradouro';
+        $obj = new $class;
+        return ["result" => $obj->retornaCEP($cep), "text" => $obj->retornaConteudoRequisicao()];
+    }
+
 }

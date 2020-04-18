@@ -1,0 +1,9 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+        "phpformatter.composer": true,
+        "composer.executablePath": "C:\\ProgramData\\ComposerSetup\\bin\\composer.bat",
+        "phpformatter.arguments": [
+                "--level=psr2"
+        ],
+        "phpformatter.logging": true
+}

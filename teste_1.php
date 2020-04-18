@@ -4,7 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 use Jarouche\ViaCEP\HelperViaCep;
 
 //Using Helper
-$result = HelperViaCep::getBuscaViaCEP('Piped', '01311300');
+$result = HelperViaCep::getBuscaViaCEP('Json', '01311300');
 print_r($result);
 
 //Using class
@@ -14,4 +14,6 @@ $result = $class->retornaCEP('01311300');
 echo $class->retornaConteudoRequisicao();
 print_r($result);
 
-
+//pegando pelo filtro de estado,cidade e logradouro
+$class_cep = HelperViaCep::getBuscaViaCEPLogradouro('SP',"São Paulo","Paulista");
+var_dump($class_cep);
