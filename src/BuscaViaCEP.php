@@ -14,7 +14,7 @@ abstract class buscaViaCEP implements ViaCEPInterface
      * Constante que indica qual o endereço da requisição
      * @var string CEP_SITE 
      */
-    const CEP_SITE = 'http://viacep.com.br/ws/';
+    const CEP_SITE = 'https://viacep.com.br/ws/';
     
     /** 
      * 
