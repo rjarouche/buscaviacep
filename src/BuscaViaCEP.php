@@ -83,9 +83,12 @@ abstract class buscaViaCEP implements ViaCEPInterface
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSLVERSION,3); 
         $this->results_string = curl_exec($ch);
+        if (curl_errno($ch)) {
+            throw new \Exception(curl_error($ch));
+        }
         curl_close($ch);
-        
     }
+
     /**
      * Método fazRequisicao
      * Método FACADE para validar e fazer a requicao;
